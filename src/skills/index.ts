@@ -3,6 +3,7 @@ import { examples } from "@/examples/code";
 // Import markdown files at build time
 import threeDSkill from "./3d.md";
 import audioSkill from "./audio.md";
+import brandFilmSkill from "./brand-film.md";
 import chartsSkill from "./charts.md";
 import messagingSkill from "./messaging.md";
 import sequencingSkill from "./sequencing.md";
@@ -22,6 +23,7 @@ const GUIDANCE_SKILLS = [
   "sequencing",
   "spring-physics",
   "audio",
+  "brand-film",
 ] as const;
 
 // Example skills (complete working code references)
@@ -52,6 +54,7 @@ const guidanceSkillContent: Record<(typeof GUIDANCE_SKILLS)[number], string> = {
   sequencing: sequencingSkill,
   "spring-physics": springPhysicsSkill,
   audio: audioSkill,
+  "brand-film": brandFilmSkill,
 };
 
 // Map example skill names to example IDs
@@ -110,6 +113,7 @@ Guidance categories (patterns and rules):
 - sequencing: multiple elements appearing at different times, staggered animations, choreographed entrances
 - spring-physics: bouncy animations, organic motion, elastic effects, overshoot animations
 - audio: voiceover, narration, music, sound effects, ticks, pulses, impacts, whooshes, beats, audio synchronization, sound design
+- brand-film: premium brand films, launch films, manifesto videos, continuous visual storytelling, moving line or dot motifs, graphic narrative, connected scene choreography, transform-driven transitions, cinematic kinetic typography
 
 Code examples (complete working references):
 - example-histogram: animated bar chart with spring animations and @remotion/shapes
