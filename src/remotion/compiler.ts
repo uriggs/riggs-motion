@@ -1,4 +1,5 @@
 import * as Babel from "@babel/standalone";
+import { Audio } from "@remotion/media";
 import { Lottie } from "@remotion/lottie";
 import * as RemotionShapes from "@remotion/shapes";
 import { ThreeCanvas } from "@remotion/three";
@@ -19,6 +20,7 @@ import {
   Sequence,
   interpolate,
   spring,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
@@ -103,6 +105,7 @@ export function compileCode(code: string): CompilationResult {
       spring,
       Sequence,
       Img,
+      staticFile,
     };
 
     const wrappedCode = `${transpiled.code}\nreturn DynamicAnimation;`;
@@ -121,6 +124,8 @@ export function compileCode(code: string): CompilationResult {
       "spring",
       "Sequence",
       "Img",
+      "staticFile",
+      "Audio",
       "useState",
       "useEffect",
       "useMemo",
@@ -167,6 +172,8 @@ export function compileCode(code: string): CompilationResult {
       spring,
       Sequence,
       Img,
+      staticFile,
+      Audio,
       useState,
       useEffect,
       useMemo,
